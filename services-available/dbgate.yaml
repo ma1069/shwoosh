@@ -1,0 +1,15 @@
+services:
+  dbgate:
+    image: dbgate/dbgate
+    ports:
+      - ${PORT_DBGATE}:3000
+    networks:
+      - net-default
+    volumes:
+      - dbgate_data:/root/.dbgate
+    profiles:
+      - dbgate
+    restart: unless-stopped
+
+volumes:
+  dbgate_data:

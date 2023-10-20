@@ -1,0 +1,10 @@
+services:
+  excalidraw:
+    image: 	excalidraw/excalidraw:latest
+    ports:
+      - ${PORT_EXCALIDRAW}:3000
+    networks:
+      - net-default
+    profiles:
+      - excalidraw
+    restart: unless-stopped

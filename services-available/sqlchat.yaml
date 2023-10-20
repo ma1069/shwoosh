@@ -1,0 +1,15 @@
+services:
+  sqlchat:
+    image: sqlchat/sqlchat
+    ports:
+      - ${PORT_SQLCHAT}:3000
+    networks:
+      - net-default
+    profiles:
+      - sqlchat
+    restart: unless-stopped
+    environment:
+      - OPENAI_API_KEY=${SQLCHAT_OPENAI_KEY}
+      - NEXT_PUBLIC_ALLOW_SELF_OPENAI_KEY=true
+      - NEXTAUTH_SECRET=xxx
+      - NEXT_PUBLIC_DATABASE_LESS=true
