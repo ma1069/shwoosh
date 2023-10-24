@@ -1,0 +1,75 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Social stuff:
+    - Gmail:
+        icon: https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg
+        href: https://mail.google.com
+        description: Email inbox
+
+    - Calendar:
+        icon: https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Calendar_icon_%282020%29.svg
+        href: https://calendar.google.com
+        description: Calendar
+
+    - Github:
+        icon: https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg
+        href: https://github.com/
+        description: Check your PRs here!
+
+    - Jira:
+        icon: https://www.atlassian.com/favicon-32x32.png
+        href: https://www.atlassian.com/it/software/jira
+        description: All your tasks are here! 
+
+
+- Work Tools:
+    - Visual Studio Code:
+        icon: https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg
+        href: http://my-ip:9001
+        description: This is already open in another tab, you don't really need me
+
+    - Excalidraw:
+        icon: https://excalidraw.com/favicon-32x32.png
+        href: http://my-ip:9005
+        description: Create beautiful schemas here!
+        container: toolset-excalidraw-1
+
+    - DBGate:
+        icon: https://raw.githubusercontent.com/dbgate/dbgate/master/app/icon.png
+        href: http://my-ip:9003
+        description: A powerful database manager
+        container: toolset-dbgate-1
+
+    - SQL Chat:
+        icon: https://avatars.githubusercontent.com/u/128299021?s=48&v=4
+        href: http://my-ip:9004
+        description: SQL + ChatGPT = ❤️
+        container: toolset-sqlchat-1
+
+
+- System:
+    - Portainer - Docker UI:
+        icon: https://my-ip:9002/2dcfc527d067d4ae3424.png
+        href: https://my-ip:9002
+        description: Manage your docker containers
+        container: toolset-portainer-1
+        widget:
+            type: portainer
+            url: https://my-ip:9002
+            env: 2
+            key: <GET-YOUR-PORTAINER-KEY>
+
+    - Server Status:
+        icon: https://icons-for-free.com/iconfiles/png/512/tailscale-1331550893565742691.png
+        description: If you can read me, I'm fine, I guess. It's probably worth duplicating me and monitor other devices health 
+        widget:
+            type: tailscale
+            deviceid: <MY-DEVICE-ID>
+            key: <GET-YOUR-TAILSCALE-KEY>
+
+    - Settings:
+        icon: https://upload.wikimedia.org/wikipedia/commons/a/ac/Windows_Settings_icon.svg
+        href: https://my-ip:9090
+        description: Check your system settings. This is probably the best and most impressive piece of software running in this machine... and obviously YOU didn't write it!
