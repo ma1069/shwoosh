@@ -1,0 +1,13 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    ports:
+      - ${PORT_HOME}:3000
+    networks:
+      - net-default
+    volumes:
+      - ~/.home.config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    profiles:
+      - homepage
+    restart: unless-stopped
